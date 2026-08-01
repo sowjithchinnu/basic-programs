@@ -58,7 +58,6 @@ hindi = float(input("enter your hindi marks: "))
 total = maths + science + english + social + hindi
 average = total/5
 print(f"the total of the 5 subjects is {total}, and the average is {average}")
-'''
 
 # Write a program to read seconds and convert them into hours, minutes and seconds.
 total_seconds = int(input("enter the number of seconds: "))
@@ -67,3 +66,4 @@ hours = total_seconds // 3600
 minutes = remaining_seconds // 60
 seconds = remaining_seconds % 60
 print(f" {total_seconds} seconds is equal to, {hours} hours {minutes} minutes and {seconds} seconds.")
+'''

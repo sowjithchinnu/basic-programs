@@ -43,5 +43,15 @@ if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
     print("it is a leap year")
 else:
     print("it is not a leap year")
-'''
 
+# Write a program to read a character and check whether it is a vowel or a consonant.
+word = str(input("enter a string: "))
+lower = word.lower()
+if len(word) == 1 and lower.isalpha():
+    if lower in "aeiou":
+        print("it is a vowel")
+    else:
+        print("it is a consonant")
+else:
+    print("enter a single valid alphabet")
+'''

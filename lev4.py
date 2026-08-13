@@ -53,4 +53,28 @@ while temp > 0:
 if temp < 0:
     reverse = -reverse
 print(reverse)
+
+# Write a program to find the largest digit in a number n.
+n = int(input("enter a number: "))
+temp = abs(n)
+maxx = 0
+while temp > 0:
+    last = temp % 10
+    if last > maxx:
+        maxx = last
+    temp //= 10
+print(maxx)
+
+# Write a program to find the smallest digit in a number n.
+n = int(input("enter a number: "))
+temp = abs(n)
+minn = 9
+if temp == 0:
+    minn = 0
+while temp > 0:
+    last = temp % 10
+    if last < minn:
+        minn = last
+    temp //= 10
+print(minn)
 '''

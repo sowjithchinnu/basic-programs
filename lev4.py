@@ -29,4 +29,28 @@ while temp > 0:
     total_sum += temp % 10
     temp //= 10
 print(total_sum)
+
+# Write a program to find the product of all digits of a number n.
+n = int(input("enter a number: "))
+temp = abs(n)
+product = 1 if temp > 0 else 0
+while temp > 0:
+    last = temp % 10
+    product *= last
+    temp //= 10
+print(product)
+
+# Write a program to reverse a number n.
+n = int(input("enter a number: "))
+temp = abs(n)
+reverse = 0
+if temp == 0:
+    reverse = 0
+while temp > 0:
+    last = temp % 10
+    reverse = reverse * 10 + last
+    temp //= 10
+if temp < 0:
+    reverse = -reverse
+print(reverse)
 '''

@@ -77,4 +77,35 @@ while temp > 0:
         minn = last
     temp //= 10
 print(minn)
+
+# Write a program to count the number of even digits and odd digits in a number n.
+n = int(input("enter a number: "))
+temp = abs(n)
+even_count = 0
+odd_count = 0
+if temp == 0:
+    even_count = 1
+while temp > 0:
+    last = temp % 10
+    if last % 2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+    temp //= 10
+print(f"the number of even digits in the given number {n} are {even_count}")
+print(f"the number of odd digits in the given number {n} are {odd_count}")
+
+# Write a program to check whether a number n is a palindrome (reads the same reversed).
+n = int(input("enter a number: "))
+temp = abs(n)
+real = n
+palindrome = 0
+while temp > 0:
+    last = temp % 10
+    palindrome = palindrome * 10 + last
+    temp //= 10
+if real == palindrome:
+    print("is palindrome")
+else:
+    print("not a palindrome")
 '''

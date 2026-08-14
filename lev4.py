@@ -108,4 +108,30 @@ if real == palindrome:
     print("is palindrome")
 else:
     print("not a palindrome")
+    
+# Write a program to replace all zeros in a number n with the digit 5.
+n = int(input("enter a number n: "))
+temp = abs(n)
+replace = 0 if temp > 0 else 5
+multiplier = 1
+while temp > 0:
+    last = temp % 10
+    if last == 0:
+        last = 5
+    replace += (last * multiplier)
+    multiplier *= 10
+    temp //= 10
+if n < 0:
+    replace = -replace
+print(replace)
+
+# Write a program to find the sum of the first and last digit of a number n.
+n = int(input("enter a number: "))
+temp = abs(n)
+last_digit = temp % 10
+while temp >= 10:
+    temp //= 10
+first_digit = temp
+summ = first_digit + last_digit
+print(summ)
 '''

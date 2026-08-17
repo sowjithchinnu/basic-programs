@@ -23,9 +23,37 @@ else:
     for i in range(2, n+1):
         is_prime = True
         for j in range(2, int(i**0.5) + 1):
-            if i%j == 0:
+            if i % j == 0:
                 is_prime = False
                 break
         if is_prime:
             print(i)
+
+# Write a program to display the first n prime numbers.
+n = int(input("enter a number: "))
+if n <= 0:
+    print("No prime numbers!")
+count = 0
+i = 2
+while count < n:
+    is_prime = True
+    for j in range(2, int(i**0.5) + 1):
+        if i % j == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(i)
+        count += 1
+    i += 1
+
+# Write a program to check whether a number is an Armstrong number.
+n = int(input("enter a number: "))
+power = len(str(n))
+total = 0
+for digit in str(n):
+    total += int(digit) ** power
+if total == n:
+    print("is an Armstrong number")
+else:
+    print("not an Armstrong number")
 '''

@@ -56,4 +56,16 @@ if total == n:
     print("is an Armstrong number")
 else:
     print("not an Armstrong number")
+
+# Write a program to display all Armstrong numbers from 1 to n.
+n = int(input("enter a number: "))
+for i in range(1, n + 1):
+    power = len(str(i))
+    total = 0
+    for digit in str(i):
+        total += int(digit) ** power
+    if total == i:
+        print(i)
 '''
+
+# Write a program to check whether a number is a perfect number.

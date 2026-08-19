@@ -1,5 +1,5 @@
-
-'''# Write a program to read a number and check whether it is prime or not.
+'''
+# Write a program to read a number and check whether it is prime or not.
 n = int(input("enter a number: "))
 if n <= 1:
     print(f"{n} is not a prime number")
@@ -66,6 +66,59 @@ for i in range(1, n + 1):
         total += int(digit) ** power
     if total == i:
         print(i)
-'''
 
 # Write a program to check whether a number is a perfect number.
+n = int(input("enter a number: "))
+total = 0
+for i in range(1, n//2 + 1):
+    if n % i ==0:
+        total += i
+if total == n and n>0:
+    print("it is a perfect number")
+else:
+    print("it is not a perfect number")
+
+# Write a program to check whether a number is a strong number (sum of factorials of its digits).
+n = int(input("enter a number: "))
+total = 0
+for digit in str(n):
+    fact = 1
+    for i in range(1, int(digit) + 1):
+        fact *= i
+    total += fact
+if total == n:
+    print("it is a strong number")
+else:
+    print("not a strong number")
+
+# Write a program to check whether a number is an automorphic number.
+n = int(input("enter a number: "))
+square = n*n
+if str(square).endswith(str(n)):
+    print("it is an automorphic number")
+else:
+    print("it is not an automorphic number")
+
+# Write a program to check whether a number is a Harshad (Niven) number.
+n = int(input("enter a number: "))
+summ = 0
+if n <= 0:
+    print("it is not a Harshad number")
+else:
+    for digit in str(n):
+        summ += int(digit)
+    if n % summ == 0:
+        print("it is a Harshad number")
+    else:
+        print("it is not a Harshad number")
+
+# Write a program to find all factors (divisors) of a number n.
+n = int(input("enter a number: "))
+if n <= 0:
+    print("there ain't no factors")
+else:
+    for i in range(1, n//2 + 1):
+        if n % i == 0:
+            print(i)
+    print(n)
+'''

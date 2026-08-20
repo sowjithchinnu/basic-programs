@@ -121,4 +121,30 @@ else:
         if n % i == 0:
             print(i)
     print(n)
+
+# Write a program to count the number of factors of a number n.
+n = int(input("enter a number: "))
+count = 0
+for i in range(1, n//2+1):
+    if n % i == 0:
+        count += 1
+count += 1
+print(count)
+
+# Write a program to find the GCD (HCF) of two numbers.
+n = int(input("enter a number: "))
+m = int(input("enter a number: "))
+while m != 0:
+    n, m = m, n%m
+print(f"the GCD is {n}")
+
+# Write a program to find the LCM of two numbers.
+n = int(input("enter a number: "))
+m = int(input("enter a number: "))
+a = n
+b = m
+while m != 0:
+    n, m = m, n%m
+LCM = a*b//n
+print(f"the LCM of {a} and {b} is {LCM}")
 '''

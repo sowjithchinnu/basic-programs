@@ -44,6 +44,13 @@ else:
     for i in range(1, y+1):
         value *= x
     print(value)
-'''
 
 # Write a program to print a right-angled triangle pattern of stars of height n.
+n = int(input("enter a number: "))
+for i in range(1, n+1):
+    for j in range(1, i+1):
+        print("*", end = "")
+    print()
+'''
+
+# Write a program to print an inverted right-angled triangle pattern of stars of height n.

@@ -51,6 +51,37 @@ for i in range(1, n+1):
     for j in range(1, i+1):
         print("*", end = "")
     print()
-'''
 
 # Write a program to print an inverted right-angled triangle pattern of stars of height n.
+n = int(input("enter a number: "))
+for i in range(1, n+1):
+    for j in range(n-i+1):
+        print("*", end="")
+    print()
+
+# Write a program to print a pyramid pattern of stars of height n.
+n = int(input("enter a number: "))
+for i in range(1, n+1):
+    for j in range(n-i):
+        print(" ", end="")
+    for k in range(2*i-1):
+        print("*", end="")
+    print()
+
+# Write a program to print a number triangle (row i contains numbers 1 to i).
+n = int(input("enter a number: "))
+for i in range(1, n+1):
+    for j in range(1, i+1):
+        print(j, end="")
+    print()
+
+# Write a program to print Pascal's triangle for n rows.
+n = int(input("enter a number: "))
+result = []
+for i in range(n):
+    row = [1] * (i+1)
+    for j in range(1, i):
+        row[j] = result[i-1][j-1] + result[i-1][j]
+    result.append(row)
+    print(result)
+'''

@@ -34,4 +34,22 @@ string = str(input("enter a string: "))
 rev_str = string[::-1]
 if rev_str == string:
     print(f"{string} is a palindrome")
+else:
+    print(f"{string} is not a palindrome")
+    
+# Write a program to convert a string to uppercase and lowercase without inbuilt case functions.
+string = str(input("enter a string: "))
+upper = ""
+lower = ""
+for char in string:
+    if 'a' <= char <= 'z':
+        upper += chr(ord(char) - 32)
+    else:
+        upper += char
+    if 'A' <= char <= 'Z':
+        lower += chr(ord(char) + 32)
+    else:
+        lower += char
+print('Uppercase: ', upper)
+print('Lowercase: ', lower)
 '''

@@ -53,3 +53,11 @@ for char in string:
 print('Uppercase: ', upper)
 print('Lowercase: ', lower)
 '''
+
+# Write a program to count the frequency of each character in a string.
+string =input("enter a string: ")
+freq = {}
+for char in string:
+    freq[char] = freq.get(char, 0) + 1
+for char, count in freq.items():
+    print(f"{char} -> {count}")

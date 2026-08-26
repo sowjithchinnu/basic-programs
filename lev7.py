@@ -52,12 +52,39 @@ for char in string:
         lower += char
 print('Uppercase: ', upper)
 print('Lowercase: ', lower)
-'''
 
 # Write a program to count the frequency of each character in a string.
-string =input("enter a string: ")
+string = input("enter a string: ")
 freq = {}
 for char in string:
     freq[char] = freq.get(char, 0) + 1
 for char, count in freq.items():
     print(f"{char} -> {count}")
+
+# Write a program to remove all spaces from a string.
+string = input("enter a string: ")
+no_space = string.replace(" ", "")
+print(no_space)
+
+# Write a program to check whether two strings are anagrams of each other.
+first = input("enter a string: ").lower()
+second = input("enter another string: ").lower()
+if sorted(first) == sorted(second):
+    print("they are Anagrams")
+else:
+    print("not Anagrams")
+
+# Write a program to find the first non-repeating character in a string.
+string = input("enter a string: ")
+freq = {}
+for char in string:
+    freq[char] = freq.get(char, 0) + 1
+found = False
+for char in string:
+    if freq[char] == 1:
+        print(f"the first non-repeating character is {char}")
+        found = True
+        break
+if not found:
+    print("no non-repeating character")
+'''

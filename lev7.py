@@ -87,4 +87,26 @@ for char in string:
         break
 if not found:
     print("no non-repeating character")
+
+# Write a program to replace all occurrences of a character with another character in a string.
+string = input("enter a string: ")
+new_letter = input("enter a new letter: ")
+replacee = input("enter a letter to be replaced: ")
+result = ""
+for char in string:
+    if char == replacee:
+        result += new_letter
+    else:
+        result += char
+print(result)
+
+# Write a program to toggle the case of each character in a string.
+string = input("enter a string: ")
+case = ""
+for char in string:
+    if char.islower:
+        case += char.upper()
+    else:
+        case += char.lower()
+print(case)
 '''

@@ -37,6 +37,14 @@ for i in arr:
     else:
         odd_count += 1
 print(f"even count = {even_count}, odd count = {odd_count}")
-'''
 
 # Write a program to search for an element in an array (linear search).
+arr = [12, 343, 32, 65, 32, 2, 87, 964, 45]
+search = int(input("enter a number: "))
+for temp in arr:
+    if search == temp:
+        print(f"{search} found")
+        break
+else:
+    print(f"no {search}")
+'''

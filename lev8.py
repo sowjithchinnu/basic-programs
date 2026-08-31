@@ -45,6 +45,23 @@ for temp in arr:
     if search == temp:
         print(f"{search} found")
         break
-else:
     print(f"no {search}")
+
+# Write a program to reverse the elements of an array.
+arr = [12, 343, 32, 65, 32, 2, 87, 964, 45]
+rev = list(reversed(arr))
+print(rev)
+
+# Write a program to find the second largest element in an array.
+arr = [12, 343, 32, 65, 32, 2, 87, 964, 45]
+sort = sorted(set(arr))
+sec_largest = sort[-2]
+print(sec_largest)
 '''
+
+# Write a program to count the frequency of each element in an array.
+from collections import Counter
+arr = [12, 343, 32, 65, 32, 2, 87, 964, 45]
+freq = Counter(arr)
+for element, count in freq.items():
+    print(f"element {element} -> count:{count}")

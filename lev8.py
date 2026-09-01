@@ -91,6 +91,17 @@ arr_1 = [9, 5, 4, 2]
 arr_2 = [33, 1, 6, 8]
 merge = arr_1 + arr_2
 print(merge)
-'''
 
 # Write a program to find the sum of all even-indexed and odd-indexed elements separately.
+arr = [1, 2, 3, 4]
+n = len(arr)
+even_index = 0
+odd_index = 0
+for i in range(n):
+    if i%2==0:
+        even_index += arr[i]
+    else:
+        odd_index += arr[i]
+print(f"sum of even indices is {even_index}")
+print(f"sum of odd indices is {odd_index}")
+'''

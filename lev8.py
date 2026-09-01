@@ -57,7 +57,6 @@ arr = [12, 343, 32, 65, 32, 2, 87, 964, 45]
 sort = sorted(set(arr))
 sec_largest = sort[-2]
 print(sec_largest)
-'''
 
 # Write a program to count the frequency of each element in an array.
 from collections import Counter
@@ -65,3 +64,33 @@ arr = [12, 343, 32, 65, 32, 2, 87, 964, 45]
 freq = Counter(arr)
 for element, count in freq.items():
     print(f"element {element} -> count:{count}")
+
+# Write a program to remove duplicate elements from an array.
+arr = [12, 343, 32, 65, 32, 2, 87, 964, 45]
+seen = []
+for i in arr:
+    if i not in seen:
+        seen.append(i)
+print(seen)
+
+# Write a program to sort an array in ascending order (bubble sort).
+arr = [12, 343, 32, 65, 32, 2, 87, 964, 45]
+n = len(arr)
+for i in range(n):
+    isSwap = False
+    for j in range(n-i-1):
+        if arr[j] > arr[j+1]:
+            arr[j], arr[j+1] = arr[j+1], arr[j]
+            isSwap = True
+    if not isSwap:
+        break
+print(arr)
+
+# Write a program to merge two arrays into one.
+arr_1 = [9, 5, 4, 2]
+arr_2 = [33, 1, 6, 8]
+merge = arr_1 + arr_2
+print(merge)
+'''
+
+# Write a program to find the sum of all even-indexed and odd-indexed elements separately.

@@ -8,7 +8,6 @@ def isPrime(n):
             return False
     return True
 print(isPrime(1012))
-'''
 
 # Write a program to print all prime numbers between two given numbers a and b.
 first = int(input("enter a number to start with: "))
@@ -21,8 +20,20 @@ else:
     for i in range(max(2, first), last):
         isPrime = True
         for j in range(2, int(i**0.5)+1):
-            if i%j == 0:
+            if i % j == 0:
                 isPrime = False
                 break
         if isPrime:
             print(i)
+
+# Write a program to find the sum of digits of a number repeatedly until a single digit remains.
+n = int(input("enter a number: "))
+total = n
+while n >= 10:
+    total = 0
+    while n > 0:
+        total += n % 10
+        n //= 10
+    n = total
+print(total)
+'''

@@ -66,4 +66,34 @@ if isPrime and palin:
     print(True)
 else:
     print(False)
+
+# Write a program to find the largest and smallest number that can be formed using the digits of n.
+n = int(input("enter a number: "))
+num = n
+digits = []
+while num > 0:
+    digits.append(num%10)
+    num //= 10
+sort = sorted(digits)
+smallest = int(''.join(map(str, sort)))
+largest = int(''.join(map(str, list(reversed(sort)))))
+print(f"the smallest and largest number that can be formed using the number {n} are {smallest} and {largest}")
+
+# Write a program to convert a decimal number into its binary equivalent.
+n = int(input("enter a number: "))
+binary = ""
+while n > 0:
+    binary = str(n%2) + binary
+    n //= 2
+print(binary)
 '''
+
+# Write a program to convert a binary number into its decimal equivalent.
+n = input("enter a binary number: ")
+power = 0
+decimal = 0
+for digit in (reversed(n)):
+    if digit == '1':
+        decimal += 2 ** power
+    power += 1
+print(decimal)
